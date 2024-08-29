@@ -3,7 +3,7 @@
 </template>
 
 <script setup>
-import { onMounted } from 'vue'
+import { onMounted, onBeforeMount } from 'vue'
 
 const props = defineProps({
     configurationId: {
@@ -12,22 +12,21 @@ const props = defineProps({
     }
 })
 
-let script = wwLib.getFrontDocument().createElement("script");
-script.type = "module";
-script.id = "nylas-scheduler-id"
-script.defer = true;
-script.src = "https://unpkg.com/@nylas/web-elements@latest";
-
-onMounted(() => {
+onBeforeMount(() => {
+    let script = wwLib.getFrontDocument().createElement("script");
+    script.type = "module";
+    script.id = "nylas-scheduler-id"
+    script.defer = true;
+    script.src = "https://unpkg.com/@nylas/web-elements@latest";
     if (wwLib.getFrontDocument().getElementById('nylas-scheduler-id')) {
         wwLib.getFrontDocument().getElementById('nylas-scheduler-id').remove();
     }
     wwLib.getFrontDocument().head.appendChild(script);
-    setTimeout(() => setConfigurationId(), 1000);
 })
 
-const setConfigurationId = () => {
+
+onMounted(() => {
     const nylasScheduling = wwLib.getFrontDocument().querySelector('nylas-scheduling');
     nylasScheduling.configurationId = props.configurationId;
-}
+})
 </script>
