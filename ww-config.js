@@ -1,13 +1,13 @@
 export default {
     editor: {
         label: {
-            en: 'My Element',
+            en: 'Nylas scheduler',
         },
     },
     properties: {
         configurationId: {
             label: {
-                en: 'Config id',
+                en: 'Configuration id',
             },
             type: 'Text',
             defaultValue: '',
