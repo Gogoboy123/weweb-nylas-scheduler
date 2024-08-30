@@ -1,5 +1,6 @@
 <template>
-  <Scheduler :configurationId="content.configurationId" :key="updateComponent" />
+  <Scheduler :configurationId="content.configurationId" :key="updateComponent"
+    @timeslotConfirmed="updateComponent += 1" />
 </template>
 
 <script setup>

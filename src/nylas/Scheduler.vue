@@ -1,5 +1,5 @@
 <template>
-    <nylas-scheduling></nylas-scheduling>
+    <nylas-scheduling @timeslotConfirmed="$emit('timeslotConfirmed')"></nylas-scheduling>
 </template>
 
 <script setup>
@@ -17,7 +17,7 @@ onBeforeMount(() => {
     script.type = "module";
     script.id = "nylas-scheduler-id"
     script.defer = true;
-    script.src = "https://unpkg.com/@nylas/web-elements@latest";
+    script.src = "../../node_modules/@nylas/web-elements/dist/nylas-web-elements/nylas-web-elements.esm.js";
     if (wwLib.getFrontDocument().getElementById('nylas-scheduler-id')) {
         wwLib.getFrontDocument().getElementById('nylas-scheduler-id').remove();
     }
