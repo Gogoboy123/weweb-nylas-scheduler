@@ -11,6 +11,7 @@ export default {
             },
             type: 'Text',
             defaultValue: '',
+            bindable: true,
         },
     },
 };
