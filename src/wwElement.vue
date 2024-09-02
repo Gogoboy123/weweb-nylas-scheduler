@@ -1,5 +1,8 @@
 <template>
-  <Scheduler :configurationId="content.configurationId" :key="updateComponent" />
+  <Scheduler :configurationId="content.configurationId" :key="updateComponent" @detailsConfirmed="event => $emit('trigger-event', {
+    name: 'event:booked',
+    event
+  })" />
 </template>
 
 <script setup>

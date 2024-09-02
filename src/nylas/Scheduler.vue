@@ -1,5 +1,5 @@
 <template>
-    <nylas-scheduling></nylas-scheduling>
+    <nylas-scheduling @detailsConfirmed="(e) => $emit('detailsConfirmed', e)"></nylas-scheduling>
 </template>
 
 <script setup>
