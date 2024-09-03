@@ -25,6 +25,7 @@ export default {
                 },
                 guests: [],
                 additionalFields: {},
+                timestamp: null,
             },
         },
     ],

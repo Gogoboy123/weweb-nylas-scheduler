@@ -1,5 +1,6 @@
 <template>
-    <nylas-scheduling @detailsConfirmed="(e) => $emit('detailsConfirmed', e.detail)"></nylas-scheduling>
+    <nylas-scheduling
+        @detailsConfirmed="(e) => $emit('detailsConfirmed', { ...e.detail, timestamp: e._vts })"></nylas-scheduling>
 </template>
 
 <script setup>
