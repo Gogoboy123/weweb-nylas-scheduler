@@ -14,4 +14,18 @@ export default {
             bindable: true,
         },
     },
+    triggerEvents: [
+        {
+            name: 'event:booked',
+            label: { en: 'On event booked' },
+            event: {
+                primaryParticipant: {
+                    name: '',
+                    email: '',
+                },
+                guests: [],
+                additionalFields: {},
+            },
+        },
+    ],
 };
