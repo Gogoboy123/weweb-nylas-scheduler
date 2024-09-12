@@ -18,7 +18,7 @@ onBeforeMount(() => {
     script.type = "module";
     script.id = "nylas-scheduler-id"
     script.defer = true;
-    script.src = "https://unpkg.com/@nylas/web-elements@1.1.1/dist/nylas-web-elements/nylas-web-elements.esm.js";
+    script.src = "https://cdn.jsdelivr.net/npm/@nylas/web-elements@1.1.1/dist/nylas-web-elements/nylas-web-elements.esm.js";
     if (wwLib.getFrontDocument().getElementById('nylas-scheduler-id')) {
         wwLib.getFrontDocument().getElementById('nylas-scheduler-id').remove();
     }
