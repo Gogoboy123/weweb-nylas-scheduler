@@ -29,5 +29,6 @@ onBeforeMount(() => {
 onMounted(() => {
     const nylasScheduling = wwLib.getFrontDocument().querySelector('nylas-scheduling');
     nylasScheduling.configurationId = props.configurationId;
+    nylasScheduling.nylasBranding = false;
 })
 </script>
