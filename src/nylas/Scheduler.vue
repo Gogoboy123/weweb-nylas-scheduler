@@ -10,6 +10,10 @@ const props = defineProps({
     configurationId: {
         type: String,
         required: true
+    },
+    localization: {
+        type: String,
+        required: false
     }
 })
 
@@ -30,5 +34,6 @@ onMounted(() => {
     const nylasScheduling = wwLib.getFrontDocument().querySelector('nylas-scheduling');
     nylasScheduling.configurationId = props.configurationId;
     nylasScheduling.nylasBranding = false;
+    nylasScheduling.localization = props.localization;
 })
 </script>
