@@ -13,6 +13,14 @@ export default {
             defaultValue: '',
             bindable: true,
         },
+        localization: {
+            label: {
+                en: 'localization',
+            },
+            type: 'Text',
+            defaultValue: '',
+            bindable: true,
+        }
     },
     triggerEvents: [
         {
