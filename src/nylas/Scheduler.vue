@@ -14,10 +14,6 @@ const props = defineProps({
     localization: {
         type: String,
         required: false
-    },
-    primaryParticipant: {
-        type: String,
-        required: false
     }
 })
 
@@ -38,7 +34,6 @@ onMounted(() => {
     const nylasScheduling = wwLib.getFrontDocument().querySelector('nylas-scheduling');
     nylasScheduling.configurationId = props.configurationId;
     nylasScheduling.nylasBranding = false;
-    nylasScheduling.localization = "de";
-    nylasScheduling.bookingInfo = {primaryParticipant: "joe@email.com"} ;
-    })
+    nylasScheduling.localization = props.localization;
+})
 </script>
