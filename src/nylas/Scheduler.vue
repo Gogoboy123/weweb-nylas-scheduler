@@ -14,6 +14,14 @@ const props = defineProps({
     localization: {
         type: String,
         required: false
+    },
+    name: {
+        type: String,
+        required: false
+    },
+    email: {
+        type: String,
+        required: false
     }
 })
 
@@ -35,6 +43,7 @@ onMounted(() => {
     nylasScheduling.configurationId = props.configurationId;
     nylasScheduling.nylasBranding = false;
     nylasScheduling.localization = props.localization;
-    nylasScheduling.bookingInfo = {primaryParticipant:{ email: "dev@mail.ca", name: "joe test"}};
+    // nylasScheduling.bookingInfo = {primaryParticipant:{ email: "dev@mail.ca", name: "joe test"}};
+    nylasScheduling.bookingInfo = {primaryParticipant:{ email: props.email, name: props.name}};
 })
 </script>

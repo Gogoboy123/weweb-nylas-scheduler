@@ -20,7 +20,23 @@ export default {
             type: 'Text',
             defaultValue: '',
             bindable: true,
-        }
+        },
+        email: {
+            label: {
+                en: 'email',
+            },
+            type: 'Text',
+            defaultValue: '',
+            bindable: true,
+        },
+        name: {
+            label: {
+                en: 'name',
+            },
+            type: 'Text',
+            defaultValue: '',
+            bindable: true,
+        },
     },
     triggerEvents: [
         {
