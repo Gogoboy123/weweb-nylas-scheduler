@@ -14,6 +14,10 @@ const props = defineProps({
     localization: {
         type: String,
         required: false
+    },
+    primaryParticipant: {
+        type: String,
+        required: false
     }
 })
 
@@ -35,5 +39,7 @@ onMounted(() => {
     nylasScheduling.configurationId = props.configurationId;
     nylasScheduling.nylasBranding = false;
     nylasScheduling.localization = props.localization;
-})
+    nylasScheduling.selectedLanguage = props.localization;
+    nylasScheduling.bookingInfo.primaryParticipant = props.primaryParticipant;
+    })
 </script>

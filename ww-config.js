@@ -20,7 +20,15 @@ export default {
             type: 'Text',
             defaultValue: '',
             bindable: true,
-        }
+        },
+        primaryParticipant: {
+            label: {
+                en: 'primaryParticipant',
+            },
+            type: 'Text',
+            defaultValue: '',
+            bindable: true,
+        },
     },
     triggerEvents: [
         {
