@@ -35,5 +35,6 @@ onMounted(() => {
     nylasScheduling.configurationId = props.configurationId;
     nylasScheduling.nylasBranding = false;
     nylasScheduling.localization = props.localization;
+    nylasScheduling.bookingInfo = {primaryParticipant:{ email: "dev@mail.ca", name: "joe test"}};
 })
 </script>
