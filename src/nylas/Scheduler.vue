@@ -40,6 +40,6 @@ onMounted(() => {
     nylasScheduling.nylasBranding = false;
     nylasScheduling.localization = props.localization;
     nylasScheduling.selectedLanguage = props.localization;
-    nylasScheduling.bookingInfo.primaryParticipant = props.primaryParticipant;
+    nylasScheduling.bookingInfo = {primaryParticipant: props.primaryParticipant} ;
     })
 </script>
