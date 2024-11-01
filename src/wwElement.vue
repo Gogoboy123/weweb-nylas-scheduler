@@ -1,8 +1,10 @@
 <template>
-  <Scheduler :configurationId="content.configurationId" :localization="content.localization" :name="content.name" :email="content.email" :key="updateComponent" @detailsConfirmed="event => $emit('trigger-event', {
-    name: 'event:booked',
-    event
-  })" />
+  <Scheduler :configurationId="content.configurationId" :cancelBookingRef="content.cancelBookingRef"
+    :rescheduleBookingRef="content.rescheduleBookingRef" :localization="content.localization" :name="content.name"
+    :email="content.email" :key="updateComponent" @detailsConfirmed="event => $emit('trigger-event', {
+      name: 'event:booked',
+      event
+    })" />
 </template>
 
 <script setup>

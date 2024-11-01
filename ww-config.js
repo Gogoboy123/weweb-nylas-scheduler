@@ -37,6 +37,22 @@ export default {
             defaultValue: '',
             bindable: true,
         },
+        rescheduleBookingRef: {
+            label: {
+                en: 'reschedule Booking Reference',
+            },
+            type: 'Text',
+            defaultValue: '',
+            bindable: true,
+        },
+        cancelBookingRef: {
+            label: {
+                en: 'Cancel Booking Reference',
+            },
+            type: 'Text',
+            defaultValue: '',
+            bindable: true,
+        },
     },
     triggerEvents: [
         {
